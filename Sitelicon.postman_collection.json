@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "73426222-9af7-4041-b9e2-814985a4195a",
+		"name": "Sitelicon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11566665"
+	},
+	"item": [
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "yupNhVACPgx5tossr8KHquvWqC6v4XOoFL6llOhy9b66c75d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://sitelicon-test.test/api/orden/create",
+							"protocol": "http",
+							"host": [
+								"sitelicon-test",
+								"test"
+							],
+							"path": [
+								"api",
+								"orden",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "yupNhVACPgx5tossr8KHquvWqC6v4XOoFL6llOhy9b66c75d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://sitelicon-test.test/api/orden/show/1",
+							"protocol": "http",
+							"host": [
+								"sitelicon-test",
+								"test"
+							],
+							"path": [
+								"api",
+								"orden",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirm",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "yupNhVACPgx5tossr8KHquvWqC6v4XOoFL6llOhy9b66c75d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_id\": 1,\r\n    \"payment_id\": 1,\r\n    \"payment_source\": {\r\n        \"card\": {\r\n            \"number\": \"4111111111111111\",\r\n            \"expiry\": \"2035-12\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://sitelicon-test.test/api/orden/confirmation",
+							"protocol": "http",
+							"host": [
+								"sitelicon-test",
+								"test"
+							],
+							"path": [
+								"api",
+								"orden",
+								"confirmation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authorization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "DDStdwt8jkPciXulY6hvcunDL3UrRleU0WNYZhbN0d98367b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_id\": 26,\r\n    \"payment_id\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://sitelicon-test.test/api/orden/authorization",
+							"protocol": "http",
+							"host": [
+								"sitelicon-test",
+								"test"
+							],
+							"path": [
+								"api",
+								"orden",
+								"authorization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "yupNhVACPgx5tossr8KHquvWqC6v4XOoFL6llOhy9b66c75d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_id\": 1,\r\n    \"payment_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://sitelicon-test.test/api/orden/payment",
+							"protocol": "http",
+							"host": [
+								"sitelicon-test",
+								"test"
+							],
+							"path": [
+								"api",
+								"orden",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"fahey.lelia@example.net\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sitelicon-test.test/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"sitelicon-test",
+								"test"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "yupNhVACPgx5tossr8KHquvWqC6v4XOoFL6llOhy9b66c75d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://sitelicon-test.test/api/product/list",
+							"protocol": "http",
+							"host": [
+								"sitelicon-test",
+								"test"
+							],
+							"path": [
+								"api",
+								"product",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
